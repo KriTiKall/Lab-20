@@ -24,8 +24,9 @@ class MainForm() {
 
     val frMain = JFrame()
     val tpResult = JTextPane()
+    val scroll = JScrollPane(tpResult)
     val lOrder = JLabel("Order:")
-    val choiceProduct: JComboBox<String> = JComboBox()
+    val choiceProduct = JComboBox<String>()
     val tCount = JTextField()
     val bAdd = JButton("add")
     val tpOrders = JTextPane()
@@ -47,6 +48,13 @@ class MainForm() {
             setLocation(10, 10)
             isVisible = true
             isEditable = false
+        }
+
+        scroll.apply {
+            setSize(580, 545)
+            setLocation(10, 10)
+            verticalScrollBarPolicy = ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS
+            isVisible = true
         }
 
         lOrder.apply {
@@ -91,7 +99,7 @@ class MainForm() {
             add(bSend)
             add(bAdd)
             add(choiceProduct)
-            add(tpResult)
+            add(scroll)
             add(tCount)
             add(lOrder)
         }

@@ -1,4 +1,4 @@
-package contrellors
+package controllors
 
 import gui.MainForm
 import kotlinx.coroutines.GlobalScope
